@@ -90,3 +90,6 @@ You can change the command to whatever you want, as long as it runs the file_sys
 
 I used it with Claude desktop client. I did some chat with claude, and then asked it to save the chat in a file under the current folder. Claude desktop clients was smart enough to use the tools in this server to get the current working directory, make a full path, and write content into a file
 
+<img width="781" alt="file-mcp-server-demo" src="https://github.com/user-attachments/assets/4d827b55-b538-4bf6-a06c-aa4f019b718e" />
+
+
