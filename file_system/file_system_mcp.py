@@ -21,7 +21,7 @@ def get_current_working_directory() -> str:
 
 
 @file_system_mcp.tool()
-def read_file(path: str) -> str:
+def read_file(full_file_path: str) -> str:
     """Read all contents of a file, and return it as a string.
     Args:
         path: local file path, the path should be the complete path to the file
@@ -29,10 +29,9 @@ def read_file(path: str) -> str:
         returns: String content of the file
     """
     try:
-        full_file_path = os.path.join(os.getcwd(), path)
         if not os.path.exists(full_file_path):
             full_file_path = DEFAULT_FILE_FOR_READ
-        file_content = open(path)
+        file_content = open(full_file_path)
         content = file_content.read()
         return content
     except Exception as e:
@@ -41,7 +40,8 @@ def read_file(path: str) -> str:
 
 @file_system_mcp.tool()
 def write_to_file(content: str, filepath: str):
-    """Writes the string content to a the given file
+    """Appends the string content to a the given file,
+         prefixed with a newline.
     Args:
         content: String content to write to the file
         filepath: File path to write the content to
