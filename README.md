@@ -1,0 +1,1 @@
+I gave up to all the hype about MCP servers, and decided to build some ! Open the specific server folder for details.
